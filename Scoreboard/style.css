@@ -30,7 +30,10 @@ body {
     margin: 0 auto 20px;
     padding-top: 10px;
     color: #F94F6D;
+}
 
+.score-leader {
+    border: solid 1px #10B981;
 }
 
 .reset {
@@ -57,3 +60,4 @@ body {
     border: solid 1px #1B244A;
     font-weight: 600;
 }
+
