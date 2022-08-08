@@ -24,44 +24,51 @@ function leader() {
     }
 }
 
+function updateGuestScore() {
+    guestScore.textContent = currentGuestScore
+}
+function updateHomeScore() {
+    homeScore.textContent = currentHomeScore
+}
+
 
 add1Home.addEventListener('click', function() {
     currentHomeScore += 1
-    homeScore.textContent = currentHomeScore
+    updateHomeScore()
     leader()
 })
 add2Home.addEventListener('click', function() {
     currentHomeScore += 2
-    homeScore.textContent = currentHomeScore
+    updateHomeScore()
     leader()
 })
 add3Home.addEventListener('click', function() {
     currentHomeScore += 3
-    homeScore.textContent = currentHomeScore
+    updateHomeScore()
     leader()
 })
 
 add1Guest.addEventListener('click', function(){
     currentGuestScore += 1
-    guestScore.textContent = currentGuestScore
+    updateGuestScore()
     leader()
 })
 add2Guest.addEventListener('click', function(){
     currentGuestScore += 2
-    guestScore.textContent = currentGuestScore
+    updateGuestScore()
     leader()
 })
 add3Guest.addEventListener('click', function(){
     currentGuestScore += 3
-    guestScore.textContent = currentGuestScore
+    updateGuestScore()
     leader()
 })
 
 reset.addEventListener('click', function(){
     currentGuestScore *= 0
-    guestScore.textContent = currentGuestScore
+    updateGuestScore()
     currentHomeScore *= 0
-    homeScore.textContent = currentHomeScore
+    updateHomeScore()
     leader()
 })
 
