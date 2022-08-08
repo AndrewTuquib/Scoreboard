@@ -2,6 +2,14 @@ let homeScore = document.getElementById('home-score')
 let guestScore = document.getElementById('guest-score')
 let currentHomeScore = 0
 let currentGuestScore = 0
+let add1Home = document.getElementById('add1home-btn')
+let add2Home = document.getElementById('add2home-btn')
+let add3Home = document.getElementById('add3home-btn')
+let add1Guest = document.getElementById('add1guest-btn')
+let add2Guest = document.getElementById('add2guest-btn')
+let add3Guest = document.getElementById('add3guest-btn')
+let reset = document.getElementById('reset-btn')
+
 
 function leader() {
     if (currentHomeScore > currentGuestScore) {
@@ -17,44 +25,44 @@ function leader() {
 }
 
 
-function add1Home(){
+add1Home.addEventListener('click', function() {
     currentHomeScore += 1
     homeScore.textContent = currentHomeScore
     leader()
-}
-function add2Home(){
+})
+add2Home.addEventListener('click', function() {
     currentHomeScore += 2
     homeScore.textContent = currentHomeScore
     leader()
-}
-function add3Home(){
+})
+add3Home.addEventListener('click', function() {
     currentHomeScore += 3
     homeScore.textContent = currentHomeScore
     leader()
-}
+})
 
-function add1Guest(){
+add1Guest.addEventListener('click', function(){
     currentGuestScore += 1
     guestScore.textContent = currentGuestScore
     leader()
-}
-function add2Guest(){
+})
+add2Guest.addEventListener('click', function(){
     currentGuestScore += 2
     guestScore.textContent = currentGuestScore
     leader()
-}
-function add3Guest(){
+})
+add3Guest.addEventListener('click', function(){
     currentGuestScore += 3
     guestScore.textContent = currentGuestScore
     leader()
-}
+})
 
-function reset(){
+reset.addEventListener('click', function(){
     currentGuestScore *= 0
     guestScore.textContent = currentGuestScore
     currentHomeScore *= 0
     homeScore.textContent = currentHomeScore
     leader()
-}
+})
 
 
